@@ -17,19 +17,16 @@ recognition.onresult = function (event) {
     audio.play(); // Start playing the audio
 
     // Speak the message
-    speak("Playing audio. The PSSR App will open in 1 minute.");
+    speak("Playing audio. Opening the PSSR App.");
+
+    // Open the website immediately
+    window.open("https://orgc55dbccf.crm4.dynamics.com/main.aspx?appid=3770b05e-000f-ef11-9f89-000d3ad9ca24", "_blank");
 
     // Pause the audio after 1 minute (60000 milliseconds)
     setTimeout(() => {
         audio.pause(); // Stop the audio after 1 minute
     }, 60000);
-
-    // Set a timeout to open the link after 1 minute (60000 milliseconds)
-    setTimeout(() => {
-        window.open("https://orgc55dbccf.crm4.dynamics.com/main.aspx?appid=3770b05e-000f-ef11-9f89-000d3ad9ca24", "_blank");
-        speak("Opening PSSR App.");
-    }, 60000); // 60000 milliseconds = 1 minute
-} 
+}
 else {
     speak("Sorry, I didn't understand that. Can you please repeat?");
   }
