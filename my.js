@@ -61,7 +61,7 @@ function startDynamicFlow() {
         // Pause the audio after 1 minute (60000 milliseconds)
         setTimeout(() => {
             audio.pause();
-        }, 60000);
+        }, 30000);
     });
 }
 
