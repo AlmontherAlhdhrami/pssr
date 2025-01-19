@@ -58,7 +58,7 @@ function startDynamicFlow() {
         // Speak the message
         speak("Playing audio. Opening the PSSR App.");
 
-        // Pause the audio after 1 minute (60000 milliseconds)
+        // Pause the audio after 30 sec(30000 milliseconds)
         setTimeout(() => {
             audio.pause();
         }, 30000);
